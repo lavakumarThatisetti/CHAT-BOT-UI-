@@ -1,0 +1,155 @@
+#textmsg{
+    border-width:0px;
+    border:none;
+    box-shadow:none;
+}
+#chat_header{
+    margin-bottom: 0%;
+    padding: 0%;
+    display: table;
+    background-color: #bb2124;
+}
+#chatlogs{
+    display: block; 
+    height:350px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* flex-direction: column-reverse; */
+}
+#chatbot{
+    position:fixed;
+    right:0;
+    bottom:0;
+    margin-bottom:10px;
+    margin-right:10px;
+}
+#botname,#bot_image,#close{
+    display:table-cell;
+    vertical-align:middle;
+}
+#botname{
+    color: white;
+    padding-top: 10%;
+}
+#close{
+    color:white;
+    float:right;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.modal-content { 
+    background-color: rgba(0,0,0,.0) !important; 
+    border: none !important;
+ }
+ #chatdone{
+     display: none;
+     color:white;
+     background-color: rgba(238, 15, 19, 0.5);
+     padding: 2%;
+     border-radius: 5%;
+ }
+#bot_image{
+    position: relative;
+    width: 90px;
+    height:70px;
+    border: none;
+    box-shadow: 0 0 0 0 rgba(52,216,249, 0.7);
+    border-radius: 100%;
+    background-image: url(..//images/ironman.png);
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+}
+.Chat-icon {
+    position: relative;
+    width: 95px;
+    height: 95px;
+    border: none;
+    box-shadow: 0 0 0 0 rgba(52,216,249, 0.7);
+    border-radius: 50%;
+    background-color: #0D9EBB;
+    background-image: url(..//images/Chat.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    -webkit-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+.Chat-icon:hover  {
+    -webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none;
+    cursor: pointer;
+}
+  
+@-webkit-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+@-moz-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+@-ms-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+@keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+  
+
+#chatlogs::-webkit-scrollbar-track {
+    border: 1px solid rgb(241, 235, 235);
+    padding: 2px 0;
+    background-color: #f4f7f4;
+}
+  
+#chatlogs::-webkit-scrollbar {
+    width: 6px;
+}
+  
+#chatlogs::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px #bb2124;
+    background-color: #bb2124;
+    border: 1px solid rgb(241, 235, 235);
+}
+.UserMsg,.botMsg{
+    background-color:#dfe3ee;
+    text-align: center;
+    float:right !important;
+    display: block;
+    border-radius: 5%;
+    padding: 2.4%;
+    margin-top: 1%;
+    max-width: 300px;
+    overflow: auto;
+    font-family: 'Courier New', Courier, monospace;
+    
+    /* width: 100%; */
+
+}
+.botMsg{
+    background-color:#bb2124;
+    color: #fff;
+    font-family: cursive;
+    font-weight: bold;
+
+}
+
+.chatdelete{
+    margin: 2%;
+}
+
+.botimg{
+    position: relative;
+    width:50px;
+    height:30px;
+    border: none;
+    box-shadow: 0 0 0 0 rgba(52,216,249, 0.7);
+    border-radius: 100%;
+    background-image: url(..//images/ironman.png);
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+@media only screen and (min-width: 150px) and (max-width: 600px){
+      .Chat-icon {
+            position: relative;
+            width: 50px;
+            height: 50px;
+          }
+  
+}
+  

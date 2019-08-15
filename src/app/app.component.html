@@ -1,0 +1,79 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+   {{ title }}!
+  </h1>
+</div> 
+<div class="container">
+  <button class="Chat-icon" id="chatbot" data-toggle="modal" data-target="#ChatBot" data-backdrop="static" data-keyboard="false"></button>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="ChatBot" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content closeModel" id="closeModel">
+        <h6><i id="chatdone">Chat Done &#9829;</i><i class="close" data-dismiss="modal" id="close" class="fa fa-times"></i></h6>
+   </div>
+    <section class="modal-content"> 
+      <div class="card">
+          <div id="chat_header" class="card-title">
+            <div class="d-flex flex-row">
+                <div class="p-2 pull-left rounded-circle" id="bot_image"></div>
+                <span class="p-2 h2" id="botname">IronMan Jarvis</span>
+                <span>
+                   <button type="button" class="btn btn-danger" (click)="chatlogs.innerHTML = ''">Delete Chat</button>
+                </span>
+               </div>
+           </div>
+           <br/>
+          <div class="card-body" id="chatlogs" #chatlogs> 
+            <!-- <textarea  class="form-control width100" rows="12"></textarea> -->
+            <!-- <div class="d-flex justify-content-start mb-4">
+								<div class="img_cont_msg">
+									<img src="https://devilsworkshop.org/files/2013/01/enlarged-facebook-profile-picture.jpg" class="rounded-circle user_img_msg">
+								</div>
+								<div class="msg_cotainer">
+									Hi, how are you samim?
+									<span class="msg_time">8:40 AM, Today</span>
+								</div>
+						</div> -->
+						<!-- <div class="d-flex justify-content-end mb-4">
+								<div class="msg_cotainer_send">
+									Hi Maryam i am good tnx how about you?
+									<span class="msg_time_send">8:55 AM, Today</span>
+								</div>
+								<div class="img_cont_msg">
+							    <img src="../images/Chat.png" class="rounded-circle user_img_msg">
+								</div>
+							</div> -->
+          </div>
+          <hr/>
+          <div id="chat_footer">
+            <div class="input-bar">
+                <div class="input-bar-item width100">
+                  <form #inputMsg="ngForm" (ngSubmit)="onSubmit()">
+                      <div class="input-group">
+                        <input required placeholder="Enter Message here" (ngModelChange)="Empty()" type="text" class="form-control width100 rounded" name="chatModal.inputQuery" [(ngModel)]="chatModal.inputQuery">
+                        <span *ngIf="sendButton==true" class="input-group-btn">                          
+                            <button type="submit" class="btn btn-danger btn-block rounded">
+                                <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                            </button>
+                        </span>
+                        <span *ngIf="sendButton==false" class="input-group-btn">                          
+                            <button type="submit" class="btn btn-danger btn-block rounded" disabled>
+                                <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                            </button>
+                        </span>
+                    </div>
+                  </form>
+                </div>
+              </div>
+          </div>
+      </div>
+    </section>
+  </div>
+</div>
+  
+
+
+<router-outlet></router-outlet>
